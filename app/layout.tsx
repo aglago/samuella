@@ -19,10 +19,112 @@ const robotoMono = Roboto_Mono({
   weight: ['400', '500']
 });
 
+// Site constants for SEO
+const SITE_NAME = 'Samuella Portfolio';
+const SITE_URL = 'https://www.samuella.site';
+const TWITTER_HANDLE = '@smaglago';
+
 // Define metadata (replaces Head component)
 export const metadata: Metadata = {
-  title: 'Samuella | Full Stack Web Developer',
-  description: 'Professional portfolio of Samuella, a Full Stack Web Developer',
+  // Basic metadata
+  title: {
+    default: 'Samuella | Full Stack Web Developer',
+    template: '%s | Samuella'
+  },
+  description: 'Professional portfolio of Samuella, a Full Stack Web Developer specializing in creating innovative, user-friendly web applications with React, Next.js, and Node.js.',
+  
+  // Favicon and icons
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      {
+        rel: 'mask-icon',
+        url: '/safari-pinned-tab.svg',
+        color: '#888888', // Your accent color
+      },
+    ],
+  },
+  
+  // Manifest file
+  manifest: '/site.webmanifest',
+  
+  // Open Graph metadata
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: 'Samuella | Full Stack Web Developer',
+    description: 'Professional portfolio of Samuella, a Full Stack Web Developer specializing in creating innovative, user-friendly web applications.',
+    images: [
+      {
+        url: `${SITE_URL}/images/og-image.jpg`, // Create this image (1200x630px)
+        width: 1200,
+        height: 630,
+        alt: 'Samuella - Full Stack Web Developer',
+      },
+    ],
+  },
+  
+  // Twitter metadata
+  twitter: {
+    card: 'summary_large_image',
+    site: TWITTER_HANDLE,
+    creator: TWITTER_HANDLE,
+    title: 'Samuella | Full Stack Web Developer',
+    description: 'Professional portfolio of Samuella, a Full Stack Web Developer specializing in creating innovative, user-friendly web applications.',
+    images: [`${SITE_URL}/images/twitter-image.jpg`],
+  },
+  
+  // Robots and indexing
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  
+  // Canonical URL
+  alternates: {
+    canonical: SITE_URL,
+  },
+  
+  // Other metadata
+  applicationName: SITE_NAME,
+  referrer: 'origin-when-cross-origin',
+  keywords: ['web developer', 'full stack developer', 'react developer', 'next.js developer', 'javascript developer', 'typescript developer', 'portfolio'],
+  authors: [{ name: 'Samuella' }],
+  creator: 'Samuella',
+  publisher: 'Samuella',
+  formatDetection: {
+    telephone: true,
+    date: true,
+    address: true,
+    email: true,
+    url: true,
+  },
+  metadataBase: new URL(SITE_URL),
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+  },
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#f5f5f5' },
+    { media: '(prefers-color-scheme: dark)', color: '#1a1a1a' },
+  ],
 };
 
 export default function RootLayout({
