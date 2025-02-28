@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: SITE_NAME,
     title: 'Samuella | Full Stack Web Developer',
-    description: 'Professional portfolio of Samuella, a Full Stack Web Developer specializing in creating innovative, user-friendly web applications.',
+    description: 'Full Stack Web Developer specializing in React, Next.js, and Node.js. Creating responsive, high-performance web applications with clean code and intuitive user experiences. View my portfolio for innovative projects, technical expertise, and professional web development services.',
     images: [
       {
         url: `${SITE_URL}/images/opengraph.jpeg`, // Create this image (1200x630px)

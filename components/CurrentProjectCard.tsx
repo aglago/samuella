@@ -52,25 +52,30 @@ const CurrentProjectCard = ({
       </div>
 
       <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
-        <div className="md:flex">
-          <div className="md:w-2/5 relative h-64 md:h-auto">
+        {/* On small screens, stack the layout (image above, content below). On larger screens, keep it side-by-side. */}
+        <div className="flex flex-col sm:flex-row">
+          {/* Image Section: Full width on small screens, 2/5 width on larger screens */}
+          <div className="relative w-full sm:w-2/5 h-64 sm:h-auto">
             <Image
               src={imageUrl}
               alt={title}
-              fill
+              layout="fill"
               className="object-cover"
             />
           </div>
-          <div className="p-6 md:w-3/5">
-            <h3 className="text-xl font-semibold mb-2 text-primary">{title}</h3>
-            <p className="text-secondary mb-4">{description}</p>
 
+          {/* Card Content Section */}
+          <div className="p-6 flex flex-col sm:w-3/5">
+            <h3 className="text-xl font-semibold mb-2 text-primary">{title}</h3>
+            <p className="text-secondary mb-4 flex-grow">{description}</p>
+
+            {/* Technologies Section */}
             <div className="mb-4">
               <div className="flex flex-wrap gap-2">
                 {technologies.map((tech, index) => (
                   <span
                     key={index}
-                    className="bg-light text-secondary px-3 py-1 rounded-full text-sm"
+                    className="bg-gray-200 text-secondary px-2 py-1 rounded text-sm"
                   >
                     {tech}
                   </span>
@@ -78,35 +83,37 @@ const CurrentProjectCard = ({
               </div>
             </div>
 
+            {/* Estimated Completion Section */}
             <div className="flex items-center text-sm text-secondary mb-5">
               <FaClock className="mr-1 text-accent" />
               <span>Estimated completion: {estimatedCompletion}</span>
             </div>
 
-            <div className="flex gap-4">
-              {githubUrl && (
-                <a
-                  href={githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-primary hover:text-accent transition-colors"
-                >
-                  <FaGithub size={16} />
-                  <span>Source Code</span>
-                </a>
-              )}
-              {projectUrl && (
-                <a
-                  href={projectUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-primary hover:text-accent transition-colors"
-                >
-                  <FaExternalLinkAlt size={14} />
-                  <span>Preview</span>
-                </a>
-              )}
-            </div>
+            {/* Action Buttons Section: Stack vertically on small screens, horizontally on large */}
+            <div className="flex gap-4 mt-2 pt-4 border-t border-gray-100">
+          {githubUrl && (
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-primary hover:text-accent transition-colors"
+            >
+              <FaGithub size={20} />
+              <span className="text-sm font-medium">Source Code</span>
+            </a>
+          )}
+          {projectUrl && (
+            <a
+              href={projectUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-primary hover:text-accent transition-colors ml-auto"
+            >
+              <span className="text-sm font-medium">Preview</span>
+              <FaExternalLinkAlt size={16} />
+            </a>
+          )}
+        </div>
           </div>
         </div>
       </div>

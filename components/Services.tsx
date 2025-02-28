@@ -71,7 +71,7 @@ import {
   
   const Services = ({ showHeading = true, compact = false, showLink = true }: ServicesProps) => {
     return (
-      <section className={compact ? "py-8 bg-light" : "pt-16 bg-light"}>
+      <section className={compact ? "py-8 bg-light" : "py-3 lg:pt-0 bg-light"}>
         <div className="container mx-auto px-4">
           {showHeading && (
             <div className="flex flex-col sm:flex-row justify-between items-center mb-12">
