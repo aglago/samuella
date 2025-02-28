@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     description: 'Professional portfolio of Samuella, a Full Stack Web Developer specializing in creating innovative, user-friendly web applications.',
     images: [
       {
-        url: `${SITE_URL}/images/og-image.jpg`, // Create this image (1200x630px)
+        url: `${SITE_URL}/images/opengraph.jpeg`, // Create this image (1200x630px)
         width: 1200,
         height: 630,
         alt: 'Samuella - Full Stack Web Developer',
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     creator: TWITTER_HANDLE,
     title: 'Samuella | Full Stack Web Developer',
     description: 'Professional portfolio of Samuella, a Full Stack Web Developer specializing in creating innovative, user-friendly web applications.',
-    images: [`${SITE_URL}/images/twitter-image.jpg`],
+    images: [`${SITE_URL}/images/opengraph.png`],
   },
   
   // Robots and indexing

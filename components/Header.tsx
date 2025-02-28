@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FaGithub, FaLinkedin, FaBars, FaTimes, FaTwitter } from 'react-icons/fa';
 import { CONTACT_INFO } from '@/lib/constants';
+import Image from 'next/image';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,9 +59,9 @@ const Header = () => {
         isVisible ? 'transform-none' : '-translate-y-full'
       }`}
     >
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="container mx-auto px-4 !py-0 lg:!py-3 flex justify-between items-center">
         <Link href="/" className="text-xl font-bold tracking-tighter">
-          Samuella
+          <Image src="/favicon.ico" width="200" height="200" alt="Samuella's Logo" className="mt-3 -ml-10"/>
         </Link>
         
         {/* Mobile menu button */}

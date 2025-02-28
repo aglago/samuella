@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className="hero-pattern min-h-[85vh] flex items-center justify-center">
       <div className="container mx-auto px-4 py-16">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto text-left lg:text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             Samuella.
           </h1>
@@ -18,10 +18,10 @@ const Hero = () => {
             detail, I can help turn your ideas into digital solutions that your
             customers will love and that help your business grow.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-3 w-full">
+          <div className="flex sm:flex-row justify-center items-start lg:items-center gap-3 w-full">
             <Link
               href="/contact"
-              className="w-full sm:w-auto bg-primary text-light px-6 py-3 rounded flex items-center justify-center gap-2 hover:bg-dark transition-colors"
+              className="w-full sm:w-auto bg-primary text-light px-3 lg:px-6 py-3 rounded flex items-center justify-center gap-2 hover:bg-dark transition-colors"
             >
               <span>Get in Touch</span>
               <FaArrowRight />
@@ -30,7 +30,7 @@ const Hero = () => {
               href="/resume/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto bg-primary text-light px-6 py-3 rounded flex items-center justify-center gap-2 hover:bg-dark transition-colors"
+              className="w-full sm:w-auto bg-primary text-light px-3 lg:px-6 py-3 rounded flex items-center justify-center gap-2 hover:bg-dark transition-colors"
             >
               <span>View Resume</span>
               <svg
