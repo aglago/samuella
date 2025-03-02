@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     creator: TWITTER_HANDLE,
     title: 'Samuella | Full Stack Web Developer',
     description: 'Professional portfolio of Samuella, a Full Stack Web Developer specializing in creating innovative, user-friendly web applications.',
-    images: [`${SITE_URL}/images/opengraph.png`],
+    images: [`${SITE_URL}/images/opengraph.jpeg`],
   },
   
   // Robots and indexing
