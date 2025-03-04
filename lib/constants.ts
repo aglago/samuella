@@ -82,7 +82,7 @@ export const SERVICES = [
 ];
 
 export const CURRENT_PROJECT = {
-  title: "AI-Powered Task Management Platform",
+  title: "E-Commerce Platform with Anonymous Purchase System",
   description:
     "A fully-featured online store with product management, shopping cart, and secure checkout functionality.",
   technologies: ["Next.js", "TypeScript", "Node.js", "MongoDB", "PayStack", "Clerk"],
@@ -95,7 +95,7 @@ export const CURRENT_PROJECT = {
 
 export const FEATURED_PROJECTS = [
   {
-    title: "E-Commerce Platform",
+    title: "E-Commerce Platform with Anonymous Purchase System",
     description:
       "A fully-featured online store with product management, shopping cart, and secure checkout functionality.",
     technologies: ["Next.js", "TypeScript", "Node.js", "MongoDB", "PayStack", "Clerk"],
@@ -104,7 +104,7 @@ export const FEATURED_PROJECTS = [
     projectUrl: "https://xotoys.vercel.app",
   },
   {
-    title: "Quiz Platform",
+    title: "AI-Powered Quiz Generation and Platform",
     description:
       "A fully-featured online quiz generation app from slides and learning materials to help students learn and prepare for exams",
     technologies: ["React", "Node.js", "MongoDB", "Express"],
