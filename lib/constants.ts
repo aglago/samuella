@@ -26,10 +26,10 @@ export const SKILLS = {
     // Add more database skills
   ],
   other: [
-      {name: "Visual Studio Code"},
+    { name: "Visual Studio Code" },
     { name: "Git" },
-    {name: "GitHub"},
-    {name: "Postman"},
+    { name: "GitHub" },
+    { name: "Postman" },
     // { name: "Docker" },
     // { name: "AWS" },
     // { name: "CI/CD" },
@@ -82,29 +82,23 @@ export const SERVICES = [
 ];
 
 export const CURRENT_PROJECT = {
-    title: "AI-Powered Task Management Platform",
-    description:
-      "A comprehensive task management system with AI capabilities for task prioritization, time estimation, and smart scheduling. Built with Next.js, TypeScript, and integrated with OpenAI API.",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "MongoDB",
-      "TailwindCSS",
-      "OpenAI API",
-    ],
-    imageUrl: "/images/xo.png",
-    githubUrl: "https://github.com/aglago",
-    projectUrl: "https://xotoys.vercel.app",
-    progress: 75,
-    estimatedCompletion: "March 2025",
-  };
+  title: "AI-Powered Task Management Platform",
+  description:
+    "A fully-featured online store with product management, shopping cart, and secure checkout functionality.",
+  technologies: ["Next.js", "TypeScript", "Node.js", "MongoDB", "PayStack", "Clerk"],
+  imageUrl: "/images/xo.png",
+  githubUrl: "https://github.com/aglago",
+  projectUrl: "https://xotoys.vercel.app",
+  progress: 75,
+  estimatedCompletion: "March 2025",
+};
 
 export const FEATURED_PROJECTS = [
   {
     title: "E-Commerce Platform",
     description:
       "A fully-featured online store with product management, shopping cart, and secure checkout functionality.",
-    technologies: ["Next.js", "TypeScript", "Node.js", "MongoDB", "PayStack"],
+    technologies: ["Next.js", "TypeScript", "Node.js", "MongoDB", "PayStack", "Clerk"],
     imageUrl: "/images/xo.png",
     githubUrl: "https://github.com/aglago",
     projectUrl: "https://xotoys.vercel.app",
@@ -112,7 +106,7 @@ export const FEATURED_PROJECTS = [
   {
     title: "Quiz Platform",
     description:
-      "A fully-featured online store with product management, shopping cart, and secure checkout functionality.",
+      "A fully-featured online quiz generation app from slides and learning materials to help students learn and prepare for exams",
     technologies: ["React", "Node.js", "MongoDB", "Express"],
     imageUrl: "/images/quizme.png",
     githubUrl: "https://github.com/aglago/quizme",
