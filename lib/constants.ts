@@ -104,7 +104,7 @@ export const FEATURED_PROJECTS = [
     projectUrl: "https://xotoys.vercel.app",
   },
   {
-    title: "AI-Powered Quiz Generation and Platform",
+    title: "AI-Powered Quiz Generation App",
     description:
       "A fully-featured online quiz generation app from slides and learning materials to help students learn and prepare for exams",
     technologies: ["React", "Node.js", "MongoDB", "Express"],
