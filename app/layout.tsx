@@ -24,7 +24,7 @@ const SITE_NAME = 'Samuella Portfolio';
 const SITE_URL = 'https://www.samuella.site';
 const TWITTER_HANDLE = '@smaglago';
 
-// Define metadata (replaces Head component)
+// Define metadata
 export const metadata: Metadata = {
   // Basic metadata
   title: {
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
       {
         rel: 'mask-icon',
         url: '/safari-pinned-tab.svg',
-        color: '#888888', // Your accent color
+        color: '#888888',
       },
     ],
   },
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     description: 'Full Stack Web Developer specializing in React, Next.js, and Node.js. Creating responsive, high-performance web applications with clean code and intuitive user experiences. View my portfolio for innovative projects, technical expertise, and professional web development services.',
     images: [
       {
-        url: `${SITE_URL}/images/opengraph.jpeg`, // Create this image (1200x630px)
+        url: `${SITE_URL}/images/opengraph.jpeg`,
         width: 1200,
         height: 630,
         alt: 'Samuella - Full Stack Web Developer',
