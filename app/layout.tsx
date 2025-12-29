@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Roboto_Mono } from 'next/font/google';
+import { Inter, Roboto_Mono, Source_Sans_3, Source_Serif_4 } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -9,6 +9,20 @@ const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
+  weight: ['300', '400', '500', '600', '700']
+});
+
+const sans3 = Source_Sans_3({ 
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-source-sans-3',
+  weight: ['300', '400', '500', '600', '700']
+});
+
+const sansSerif4 = Source_Serif_4({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-source-serif-4',
   weight: ['300', '400', '500', '600', '700']
 });
 
@@ -28,10 +42,10 @@ const TWITTER_HANDLE = '@smaglago';
 export const metadata: Metadata = {
   // Basic metadata
   title: {
-    default: 'Samuella | Full Stack Web Developer',
+    default: 'Samuella | Full-Stack Software Engineer',
     template: '%s | Samuella'
   },
-  description: 'Professional portfolio of Samuella, a Full Stack Web Developer specializing in creating innovative, user-friendly web applications with React, Next.js, and Node.js.',
+  description: 'Full-Stack Software Engineer specializing in building seamless digital experiences. Expert in Next.js, TypeScript, React, Node.js, Java, Spring Boot, and modern web technologies. Building innovative solutions for e-commerce, fintech, and business automation.',
   
   // Favicon and icons
   icons: {
@@ -61,8 +75,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: 'Samuella | Full Stack Web Developer',
-    description: 'Full Stack Web Developer specializing in React, Next.js, and Node.js. Creating responsive, high-performance web applications with clean code and intuitive user experiences. View my portfolio for innovative projects, technical expertise, and professional web development services.',
+    title: 'Samuella | Full-Stack Software Engineer',
+    description: 'Full-Stack Software Engineer crafting seamless digital experiences. Specialized in e-commerce platforms, fintech applications, and business automation. Expert in Next.js, TypeScript, React, Node.js, Java, Spring Boot. Building innovative solutions that solve real business problems.',
     images: [
       {
         url: `${SITE_URL}/images/opengraph.jpeg`,
@@ -78,8 +92,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: TWITTER_HANDLE,
     creator: TWITTER_HANDLE,
-    title: 'Samuella | Full Stack Web Developer',
-    description: 'Professional portfolio of Samuella, a Full Stack Web Developer specializing in creating innovative, user-friendly web applications.',
+    title: 'Samuella | Full-Stack Software Engineer',
+    description: 'Full-Stack Software Engineer building innovative digital solutions. Specialized in e-commerce, fintech, and business automation with modern web technologies.',
     images: [`${SITE_URL}/images/opengraph.jpeg`],
   },
   
@@ -104,7 +118,14 @@ export const metadata: Metadata = {
   // Other metadata
   applicationName: SITE_NAME,
   referrer: 'origin-when-cross-origin',
-  keywords: ['web developer', 'full stack developer', 'react developer', 'next.js developer', 'javascript developer', 'typescript developer', 'portfolio'],
+  keywords: [
+    'full stack software engineer', 'web developer', 'software engineer', 
+    'react developer', 'next.js developer', 'javascript developer', 'typescript developer', 
+    'java developer', 'spring boot developer', 'node.js developer',
+    'e-commerce development', 'fintech developer', 'business automation', 
+    'api development', 'payment gateway integration', 'telecom api integration',
+    'ghana software developer', 'turntabl', 'portfolio', 'web application development'
+  ],
   authors: [{ name: 'Samuella' }],
   creator: 'Samuella',
   publisher: 'Samuella',
@@ -133,7 +154,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${robotoMono.variable}`}>
+    <html lang="en" className={`${inter.variable} ${robotoMono.variable} ${sans3.variable} ${sansSerif4.variable}`}>
       <body>
         <div className="flex flex-col min-h-screen">
           <Header />

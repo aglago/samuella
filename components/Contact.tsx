@@ -58,7 +58,7 @@ const Contact = ({ showHeading = true }: ContactProps) => {
   };
 
   return (
-    <section className="py-3 lg:py-16 bg-light">
+    <section className="py-3 lg:py-16">
       <div className="container mx-auto px-4">
         {showHeading && (
           <div className="mb-16">

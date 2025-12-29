@@ -1,6 +1,6 @@
-export const SITE_TITLE = "Samuella | Full Stack Web Developer";
+export const SITE_TITLE = "Samuella | Full-Stack Software Engineer";
 export const SITE_DESCRIPTION =
-  "Samuella is a seasoned full-stack web developer specializing in JavaScript, TypeScript, Next.js, React, Node.js, and MongoDB.";
+  "Full-Stack Software Engineer specializing in building seamless digital experiences. Expert in Next.js, TypeScript, React, Node.js, Java, Spring Boot, and modern web technologies. Building innovative solutions for e-commerce, fintech, and business automation.";
 
 export const SKILLS = {
   frontend: [
@@ -10,30 +10,41 @@ export const SKILLS = {
     { name: "React" },
     { name: "Tailwind CSS" },
     { name: "HTML/CSS" },
-    // Add more frontend skills
+    { name: "Responsive Design" },
+    { name: "Data Visualization" },
   ],
   backend: [
     { name: "Node.js" },
     { name: "Express" },
-    // { name: "Python" },
-    // { name: "Django" },
-    // Add more backend skills
+    { name: "Java" },
+    { name: "Spring Boot" },
+    { name: "API Development" },
+    { name: "RESTful Services" },
+    { name: "Payment Gateway Integration" },
+    { name: "Telecom API Integration" },
+    { name: "Financial APIs" },
+    { name: "WhatsApp Business API" },
   ],
   databases: [
     { name: "MongoDB" },
-    // { name: "PostgreSQL" },
-    // { name: "MySQL" },
-    // Add more database skills
+    { name: "PostgreSQL" },
+    { name: "MySQL" },
+    { name: "Database Design" },
+    { name: "Data Modeling" },
   ],
   other: [
     { name: "Visual Studio Code" },
     { name: "Git" },
     { name: "GitHub" },
     { name: "Postman" },
-    // { name: "Docker" },
-    // { name: "AWS" },
-    // { name: "CI/CD" },
-    // Add more tools/skills
+    { name: "Docker" },
+    { name: "AWS" },
+    { name: "Vercel" },
+    { name: "SEO Optimization" },
+    { name: "Performance Optimization" },
+    { name: "AI/ML Integration" },
+    { name: "CI/CD" },
+    { name: "User Research" },
   ],
 };
 
@@ -41,44 +52,39 @@ export const SERVICES = [
   {
     title: "Custom Web Application Development",
     description:
-      "Design and development of tailored web applications that meet your specific business needs.",
+      "End-to-end development of scalable web applications using modern technologies. From concept to deployment, I build solutions that solve real business problems with clean, maintainable code and exceptional user experiences.",
     icon: "FaLaptopCode",
   },
   {
-    title: "Website Design and Development",
+    title: "E-commerce & Marketplace Solutions",
     description:
-      "Creation of responsive, modern websites that provide an excellent user experience across all devices.",
-    icon: "FaPalette",
-  },
-  {
-    title: "E-commerce Solutions",
-    description:
-      "Building robust online stores with secure payment gateways, inventory management, and user-friendly interfaces.",
+      "Comprehensive e-commerce platforms with secure payment integration, inventory management, and user-friendly interfaces. Specialized in marketplace development, anonymous purchasing systems, and multi-vendor platforms.",
     icon: "FaShoppingCart",
   },
   {
-    title: "Web Scraping and Automation",
+    title: "FinTech & Financial Application Development",
     description:
-      "Development of custom web scrapers and automation tools to collect and process data efficiently.",
+      "Secure financial applications including personal finance management, expense tracking, budgeting tools, and investment platforms. Expertise in payment gateway integration and financial API development.",
+    icon: "FaDatabase",
+  },
+  {
+    title: "Business Process Automation & Tools",
+    description:
+      "Custom automation solutions and business tools to streamline operations. From data processing to workflow automation, I build systems that save time and reduce manual effort while ensuring reliability.",
     icon: "FaRobot",
   },
   {
-    title: "API Integration and Development",
+    title: "API Development & Third-Party Integration",
     description:
-      "Integration of third-party APIs and development of custom APIs to extend functionality and connectivity.",
+      "Robust RESTful API development and seamless third-party service integration. Specialized in telecom APIs, financial services, communication platforms, and AI/ML service integration for enhanced functionality.",
     icon: "FaPlug",
   },
   {
-    title: "Database Design and Management",
+    title: "SEO-Optimized Website Development",
     description:
-      "Design, implementation, and optimization of database systems for efficient data storage and retrieval.",
-    icon: "FaDatabase",
+      "High-performance, SEO-friendly websites built with modern frameworks. Focus on Core Web Vitals, responsive design, and search engine optimization to ensure maximum visibility and user engagement.",
+    icon: "FaPalette",
   },
-  //   {
-  //     title: 'Performance Optimization and Security',
-  //     description: 'Enhancement of web application performance and implementation of security measures to protect against threats.',
-  //     icon: 'FaShieldAlt',
-  //   },
 ];
 
 export const CURRENT_PROJECT = {
@@ -95,28 +101,102 @@ export const CURRENT_PROJECT = {
 
 export const FEATURED_PROJECTS = [
   {
+    title: "iSellData - Mobile Data Marketplace",
+    description:
+      "A comprehensive mobile data bundle marketplace serving customers across Ghana with instant delivery and competitive pricing. Built with real-time telecom API integration for seamless data bundle provisioning.",
+    technologies: ["Next.js", "TypeScript", "Telecom APIs", "Payment Gateway", "MongoDB"],
+    imageUrl: "/images/iselldata.png",
+    githubUrl: "https://github.com/aglago",
+    projectUrl: "https://iselldata.net",
+  },
+  {
+    title: "Nest - Personal Finance Management Platform",
+    description:
+      "A complete financial management solution featuring real-time expense tracking, smart budgeting, savings optimization, and investment guidance. Designed to simplify personal finance for everyday users.",
+    technologies: ["Next.js", "TypeScript", "React", "Financial APIs", "Data Visualization"],
+    imageUrl: "/images/nest.png",
+    githubUrl: "https://github.com/aglago",
+    projectUrl: "https://nestgrow.vercel.app",
+  },
+  {
+    title: "Atrady - Entrepreneurship Enablement Platform",
+    description:
+      "A business startup platform connecting aspiring entrepreneurs with international suppliers. Enables small business creation through product sourcing, quality assurance, and full business support services.",
+    technologies: ["Next.js", "React", "API Integration", "WhatsApp Business", "SEO"],
+    imageUrl: "/images/atrady.png",
+    githubUrl: "https://github.com/aglago",
+    projectUrl: "https://atrady.com",
+  },
+  {
     title: "E-Commerce Platform with Anonymous Purchase System",
     description:
-      "A fully-featured online store with product management, shopping cart, and secure checkout functionality.",
+      "A fully-featured online store with product management, shopping cart, and secure checkout functionality. Features anonymous purchasing capabilities for enhanced user privacy.",
     technologies: ["Next.js", "TypeScript", "Node.js", "MongoDB", "PayStack", "Clerk"],
     imageUrl: "/images/xo.png",
     githubUrl: "https://github.com/aglago",
     projectUrl: "https://xotoys.vercel.app",
   },
   {
-    title: "AI-Powered Quiz Generation App",
+    title: "Smart Study Tool - QuizMe",
     description:
-      "A fully-featured online quiz generation app from slides and learning materials to help students learn and prepare for exams",
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
+      "An intelligent study platform that transforms learning materials and slides into interactive lessons, study plans, and quizzes. Helps students and educators create engaging study tools with AI-driven question generation.",
+    technologies: ["React", "Node.js", "MongoDB", "Express", "AI/ML APIs"],
     imageUrl: "/images/quizme.png",
     githubUrl: "https://github.com/aglago/quizme",
-    projectUrl: "https://quizme-sooty.vercel.app/",
+    projectUrl: "https://quizmev2.vercel.app/",
   },
 ];
 
+export const EXPERIENCE = [
+  {
+    role: "TLC Trainee",
+    company: "turntabl",
+    period: "Aug 2025 - Present",
+    description: "Training in real-world software engineering practices while contributing to practical projects and team-based development."
+  },
+  {
+    role: "Software Developer",
+    company: "Dove-Eloyna Int'l Ltd",
+    period: "Mar 2025 - Sep 2025",
+    description: "Worked on production software systems, contributing to frontend and backend development for business applications."
+  },
+  {
+    role: "Software Developer",
+    company: "aeTech Digital Hub",
+    period: "Apr 2025 - Jul 2025",
+    description: "Led 6 frontend developers and trained 2 interns on React API integration. Standardized UI components across 8+ client projects, reducing development time by 20%."
+  },
+  {
+    role: "Founder",
+    company: "This Team",
+    period: "Sep 2023 - Dec 2024",
+    description: "Founded and led a multi-disciplinary software team focused on building people-centered solutions. Set vision, managed projects end-to-end, and drove impactful digital products."
+  },
+  {
+    role: "Product Developer (Frontend) Intern",
+    company: "Sesi Technologies",
+    period: "Sep 2024 - Nov 2024",
+    description: "Built frontend interfaces for real products, improving UI quality and strengthening hands-on frontend development skills."
+  },
+  {
+    role: "Backend Developer Apprentice",
+    company: "KodeCamp",
+    period: "Aug 2024 - Sep 2024",
+    description: "Led backend development tasks, designed databases, broke features into tasks, and implemented efficient searching and filtering algorithms."
+  },
+  {
+    role: "Frontend Web Developer",
+    company: "Ideation Axis",
+    period: "May 2024 - Jun 2024",
+    description: "Built multiple frontend projects including a recipe finder and OTP system, strengthening data fetching skills, logical thinking, and live coding confidence."
+  }
+];
+
+
 export const CONTACT_INFO = {
-  email: "samuellamanyeaglago@gmail.com",
-  phone: "+233 50 958 1027",
+  email: "mailto:samuellamanyeaglago@gmail.com",
+  phone: "tel:+233509581027",
+  whatsapp:"https://wa.me/233509581027",
   location: "Tarkwa Nsuaem, Ghana",
   social: {
     github: "https://github.com/aglago",
