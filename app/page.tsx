@@ -1,18 +1,19 @@
 "use client";
 
 import Hero from "@/components/Hero";
-import Skills from "@/components/Skills";
 import Services from "@/components/SimpleServices";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
+import Testimonials from "@/components/Testimonials";
+import CTA from "@/components/CTA";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export default function Home() {
-  const skillsAnimation = useScrollAnimation();
   const servicesAnimation = useScrollAnimation();
   const experienceAnimation = useScrollAnimation();
   const projectsAnimation = useScrollAnimation();
-  // const contactAnimation = useScrollAnimation();
+  const testimonialsAnimation = useScrollAnimation();
+  const ctaAnimation = useScrollAnimation();
 
   return (
     <>
@@ -57,16 +58,28 @@ export default function Home() {
         <Experience />
       </section>
 
-      {/* Skills Section */}
+      {/* Testimonials Section */}
       <section
-        ref={skillsAnimation.ref}
+        ref={testimonialsAnimation.ref}
         className={`transition-all duration-700 ${
-          skillsAnimation.isVisible
+          testimonialsAnimation.isVisible
             ? "opacity-100 transform translate-y-0"
             : "opacity-0 transform translate-y-8"
         }`}
       >
-        <Skills />
+        <Testimonials />
+      </section>
+
+      {/* CTA Section */}
+      <section
+        ref={ctaAnimation.ref}
+        className={`transition-all duration-700 ${
+          ctaAnimation.isVisible
+            ? "opacity-100 transform translate-y-0"
+            : "opacity-0 transform translate-y-8"
+        }`}
+      >
+        <CTA />
       </section>
 
       {/* Contact Section
