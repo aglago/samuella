@@ -60,7 +60,7 @@ const Header = () => {
         <Link href="/" className="hidden lg:block text-xl font-bold tracking-tighter logo text-primary">
           <h1>Samuella.</h1>
         </Link>
-        
+
         {/* Mobile menu button */}
         <button
           className="md:hidden text-light focus:outline-none"
@@ -68,29 +68,22 @@ const Header = () => {
         >
           {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
-        
-        {/* Desktop Navigation */}
-        {/* <nav className="hidden md:flex items-center space-x-6">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.path}
-              className={`text-primary hover:text-accent transition-colors ${
-                pathname === item.path ? 'text-accent border-b-2 border-accent' : ''
-              }`}
-            >
-              {item.name}
-            </Link>
-          ))}
-        </nav> */}
-        <Link
+
+        <div className="flex items-center gap-6">
+          <Link
+            href="/blog"
+            className="text-secondary hover:text-primary transition-colors text-sm"
+          >
+            Blog
+          </Link>
+          <Link
               href={CONTACT_INFO.whatsapp}
               className="group sm:w-auto text-primary py-3 rounded-md flex items-center justify-center gap-2 hover:text-dark"
             >
               <span>Hire Me</span>
               <FaArrowRight className="text-sm transition-transform duration-200 group-hover:translate-x-1" />
-
             </Link>
+        </div>
       </div>
       
       {/* Mobile Navigation
