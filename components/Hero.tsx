@@ -4,9 +4,10 @@ import { FaEnvelope, FaGithub, FaLinkedin, FaPhone, FaTwitter, FaWhatsapp } from
 
 const Hero = () => {
   return (
-    <section className="mt-10 lg:mt-0 lg:min-h-[85vh] flex items-center justify-center">
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-3xl mx-auto text-left lg:text-center">
+    <section className="min-h-[85vh] lg:min-h-[85vh] flex flex-col">
+      <div className="flex-1 flex items-center justify-center">
+        <div className="container mx-auto px-4 py-16">
+          <div className="max-w-3xl mx-auto text-left lg:text-center">
           <h1 className="text-4xl md:text-6xl heading-primary mb-6">
             Samuella.
           </h1>
@@ -117,6 +118,27 @@ const Hero = () => {
               <FaWhatsapp size={20} />
             </Link>
           </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="flex justify-center pb-6">
+        <div className="flex flex-col items-center gap-1 text-accent animate-bounce">
+          <span className="text-xs tracking-wider uppercase">Scroll</span>
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
         </div>
       </div>
     </section>
