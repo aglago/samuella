@@ -149,10 +149,16 @@ export const FEATURED_PROJECTS = [
 
 export const EXPERIENCE = [
   {
+    role: "Software Engineer I",
+    company: "turntabl",
+    period: "Dec 2025 - Present",
+    description: "Focusing on frontend and user experience engineering, contributing to several projects. Building intuitive interfaces and driving UX improvements across client-facing applications."
+  },
+  {
     role: "TLC Trainee",
     company: "turntabl",
-    period: "Aug 2025 - Present",
-    description: "Training in real-world software engineering practices while contributing to practical projects and team-based development."
+    period: "Aug 2025 - Dec 2025",
+    description: "Trained in real-world software engineering practices while contributing to practical projects and team-based development."
   },
   {
     role: "Software Developer",
