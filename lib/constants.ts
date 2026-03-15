@@ -101,6 +101,15 @@ export const CURRENT_PROJECT = {
 
 export const FEATURED_PROJECTS = [
   {
+    title: "BookPlug - Community Book Sharing Platform",
+    description:
+      "A community-based book-sharing platform for Ghana. Borrow, buy, sell, or give away books with neighbors. Features book rentals, secure payments, and a growing community of readers.",
+    technologies: ["Next.js", "Turborepo", "Supabase", "PWA", "Google Books API", "OAuth"],
+    imageUrl: "/images/bookplug.png",
+    githubUrl: "https://github.com/aglago",
+    projectUrl: "https://bookplug.app",
+  },
+  {
     title: "iSellData - Mobile Data Marketplace",
     description:
       "A comprehensive mobile data bundle marketplace serving customers across Ghana with instant delivery and competitive pricing. Built with real-time telecom API integration for seamless data bundle provisioning.",
