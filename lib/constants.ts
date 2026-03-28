@@ -93,7 +93,6 @@ export const CURRENT_PROJECT = {
     "A fully-featured online store with product management, shopping cart, and secure checkout functionality.",
   technologies: ["Next.js", "TypeScript", "Node.js", "MongoDB", "PayStack", "Clerk"],
   imageUrl: "/images/xo.png",
-  githubUrl: "https://github.com/aglago",
   projectUrl: "https://xotoys.vercel.app",
   progress: 75,
   estimatedCompletion: "March 2025",
@@ -101,57 +100,59 @@ export const CURRENT_PROJECT = {
 
 export const FEATURED_PROJECTS = [
   {
+    title: "AgooSMS - Bulk SMS Platform & API",
+    description:
+      "Send bulk SMS to your customers at GH₵0.05 per message. Developers get API access at GH₵0.03 per SMS. Voice-to-text in Twi, mobile money payments, and instant delivery across all networks in Ghana.",
+    technologies: ["Next.js", "Turborepo", "REST API", "Mobile Money", "PWA", "Webhooks"],
+    imageUrl: "/images/agoosms.png",
+    projectUrl: "https://agoosms.com",
+  },
+  {
     title: "BookPlug - Community Book Sharing Platform",
     description:
-      "A community-based book-sharing platform for Ghana. Borrow, buy, sell, or give away books with neighbors. Features book rentals, secure payments, and a growing community of readers.",
+      "Borrow books from GH₵5-20/month instead of buying. Lend your books and earn GH₵8-20 monthly. Buy, sell, or give away books with neighbors across Ghana.",
     technologies: ["Next.js", "Turborepo", "Supabase", "PWA", "Google Books API", "OAuth"],
     imageUrl: "/images/bookplug.png",
-    githubUrl: "https://github.com/aglago",
     projectUrl: "https://bookplug.app",
   },
   {
     title: "iSellData - Mobile Data Marketplace",
     description:
-      "A comprehensive mobile data bundle marketplace serving customers across Ghana with instant delivery and competitive pricing. Built with real-time telecom API integration for seamless data bundle provisioning.",
+      "Buy affordable data bundles with instant delivery across all networks in Ghana. Competitive prices, mobile money payments, and 24/7 availability.",
     technologies: ["Next.js", "TypeScript", "Telecom APIs", "Payment Gateway", "MongoDB"],
     imageUrl: "/images/iselldata.png",
-    githubUrl: "https://github.com/aglago",
     projectUrl: "https://iselldata.net",
   },
   {
-    title: "Nest - Personal Finance Management Platform",
+    title: "Nest - Personal Finance App",
     description:
-      "A complete financial management solution featuring real-time expense tracking, smart budgeting, savings optimization, and investment guidance. Designed to simplify personal finance for everyday users.",
+      "Track your expenses, set budgets, and grow your savings. See where your money goes and take control of your finances with simple, visual insights.",
     technologies: ["Next.js", "TypeScript", "React", "Financial APIs", "Data Visualization"],
     imageUrl: "/images/nest.png",
-    githubUrl: "https://github.com/aglago",
     projectUrl: "https://nestgrow.vercel.app",
   },
   {
-    title: "Atrady - Entrepreneurship Enablement Platform",
+    title: "Atrady - Start Your Business",
     description:
-      "A business startup platform connecting aspiring entrepreneurs with international suppliers. Enables small business creation through product sourcing, quality assurance, and full business support services.",
+      "Source products from international suppliers and start your own business. We handle quality checks, shipping, and support so you can focus on selling.",
     technologies: ["Next.js", "React", "API Integration", "WhatsApp Business", "SEO"],
     imageUrl: "/images/atrady.png",
-    githubUrl: "https://github.com/aglago",
     projectUrl: "https://atrady.com",
   },
   {
-    title: "E-Commerce Platform with Anonymous Purchase System",
+    title: "XO Toys - Adult Store",
     description:
-      "A fully-featured online store with product management, shopping cart, and secure checkout functionality. Features anonymous purchasing capabilities for enhanced user privacy.",
+      "Shop discreetly with anonymous checkout and private delivery. No account required, no purchase history stored. Your privacy, guaranteed.",
     technologies: ["Next.js", "TypeScript", "Node.js", "MongoDB", "PayStack", "Clerk"],
     imageUrl: "/images/xo.png",
-    githubUrl: "https://github.com/aglago",
     projectUrl: "https://xotoys.vercel.app",
   },
   {
-    title: "Smart Study Tool - QuizMe",
+    title: "QuizMe - Smart Study Tool",
     description:
-      "An intelligent study platform that transforms learning materials and slides into interactive lessons, study plans, and quizzes. Helps students and educators create engaging study tools with AI-driven question generation.",
+      "Turn your notes and slides into quizzes instantly. Study smarter with AI-generated questions and track your progress as you learn.",
     technologies: ["React", "Node.js", "MongoDB", "Express", "AI/ML APIs"],
     imageUrl: "/images/quizme.png",
-    githubUrl: "https://github.com/aglago/quizme",
     projectUrl: "https://quizmev2.vercel.app/",
   },
 ];
