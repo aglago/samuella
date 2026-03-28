@@ -1,6 +1,7 @@
 "use client";
 
 import Hero from "@/components/Hero";
+import Promo from "@/components/Promo";
 import Services from "@/components/SimpleServices";
 import Pricing from "@/components/Pricing";
 import Experience from "@/components/Experience";
@@ -21,6 +22,9 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <Hero />
+
+      {/* Promo Section */}
+      <Promo />
 
       {/* Projects Section */}
       <section
