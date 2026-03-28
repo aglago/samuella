@@ -2,6 +2,7 @@
 
 import Hero from "@/components/Hero";
 import Services from "@/components/SimpleServices";
+import Pricing from "@/components/Pricing";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Testimonials from "@/components/Testimonials";
@@ -10,6 +11,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export default function Home() {
   const servicesAnimation = useScrollAnimation();
+  const pricingAnimation = useScrollAnimation();
   const experienceAnimation = useScrollAnimation();
   const projectsAnimation = useScrollAnimation();
   const testimonialsAnimation = useScrollAnimation();
@@ -44,6 +46,18 @@ export default function Home() {
         }`}
       >
         <Services />
+      </section>
+
+      {/* Pricing Section */}
+      <section
+        ref={pricingAnimation.ref}
+        className={`transition-all duration-700 ${
+          pricingAnimation.isVisible
+            ? "opacity-100 transform translate-y-0"
+            : "opacity-0 transform translate-y-8"
+        }`}
+      >
+        <Pricing />
       </section>
 
       {/* Experience Section */}
