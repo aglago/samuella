@@ -54,7 +54,6 @@ const Projects = ({ limit }: ProjectsProps) => {
                 technologies={project.technologies}
                 imageUrl={project.imageUrl}
                 projectUrl={project.projectUrl}
-                githubUrl={project.githubUrl}
               />
             )
           )}
