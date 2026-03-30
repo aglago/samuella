@@ -15,9 +15,28 @@ interface Template {
   description: string;
   price: number;
   features: string[];
+  available?: boolean;
+  demoUrl?: string;
 }
 
 const TEMPLATES: Template[] = [
+  {
+    id: "glamvibe-salon",
+    title: "GlamVibe Salon",
+    category: "Salon & Beauty",
+    description:
+      "Premium salon template with services, team profiles, gallery, testimonials, and WhatsApp booking. Perfect for hair salons, spas, and beauty studios.",
+    price: 1200,
+    features: [
+      "Services with pricing",
+      "Team profiles",
+      "Photo gallery",
+      "Testimonials",
+      "WhatsApp booking",
+    ],
+    available: true,
+    demoUrl: "https://glamvibe.vercel.app",
+  },
   {
     id: "chop-bar-restaurant",
     title: "Chop Bar & Restaurant",
@@ -134,20 +153,32 @@ const TEMPLATES: Template[] = [
 
 const TemplateCard = ({ template }: { template: Template }) => {
   return (
-    <div className="rounded-md border border-gray-200 p-6 transition-all duration-200 hover:border-primary hover:shadow-sm relative">
-      <span className="absolute top-4 right-4 text-[10px] uppercase tracking-wider bg-gray-100 text-accent px-2 py-1 rounded">
-        Coming Soon
+    <div className={`rounded-md border p-6 transition-all duration-200 relative ${
+      template.available
+        ? "border-primary hover:shadow-sm"
+        : "border-gray-100 opacity-60"
+    }`}>
+      <span className={`absolute top-4 right-4 text-[10px] uppercase tracking-wider px-2 py-1 rounded ${
+        template.available
+          ? "bg-primary text-light"
+          : "bg-gray-100 text-accent"
+      }`}>
+        {template.available ? "Available" : "Coming Soon"}
       </span>
       <div className="mb-4">
         <span className="text-xs text-accent uppercase tracking-wider">
           {template.category}
         </span>
-        <h3 className="text-xl font-semibold text-primary heading-secondary mt-1">
+        <h3 className={`text-xl font-semibold heading-secondary mt-1 ${
+          template.available ? "text-primary" : "text-accent"
+        }`}>
           {template.title}
         </h3>
       </div>
 
-      <p className="text-secondary text-sm leading-relaxed mb-4">
+      <p className={`text-sm leading-relaxed mb-4 ${
+        template.available ? "text-secondary" : "text-accent"
+      }`}>
         {template.description}
       </p>
 
@@ -155,7 +186,7 @@ const TemplateCard = ({ template }: { template: Template }) => {
         {template.features.map((feature, index) => (
           <li
             key={index}
-            className="text-xs text-secondary flex items-center gap-2"
+            className="text-xs text-accent flex items-center gap-2"
           >
             <span className="w-1 h-1 bg-accent rounded-full"></span>
             {feature}
@@ -163,20 +194,44 @@ const TemplateCard = ({ template }: { template: Template }) => {
         ))}
       </ul>
 
-      <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-        <div>
-          <span className="text-xs text-accent">From</span>
-          <span className="text-lg font-semibold text-primary ml-1">
-            GH₵{template.price.toLocaleString()}
-          </span>
+      {template.available && template.demoUrl && (
+        <div className="mb-4">
+          <Link
+            href={template.demoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-accent hover:text-primary transition-colors underline"
+          >
+            View live demo
+          </Link>
         </div>
+      )}
+
+      <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+        {template.available ? (
+          <div>
+            <span className="text-xs text-accent">From</span>
+            <span className="text-lg font-semibold text-primary ml-1">
+              GH₵{template.price.toLocaleString()}
+            </span>
+          </div>
+        ) : (
+          <div></div>
+        )}
         <Link
-          href={`https://wa.me/233509581027?text=Hi Samuella, I'm interested in the "${template.title}" template for my business. Please notify me when it's ready!`}
+          href={template.available
+            ? `https://wa.me/233509581027?text=Hi Samuella, I want to buy the "${template.title}" template for my business!`
+            : `https://wa.me/233509581027?text=Hi Samuella, I'm interested in the "${template.title}" template. Please notify me when it's ready!`
+          }
           target="_blank"
           rel="noopener noreferrer"
-          className="group text-sm text-primary flex items-center gap-2 hover:text-accent transition-colors"
+          className={`group text-sm flex items-center gap-2 transition-colors ${
+            template.available
+              ? "text-primary hover:text-accent"
+              : "text-accent hover:text-primary"
+          }`}
         >
-          <span>Notify Me</span>
+          <span>{template.available ? "Buy Now" : "Notify Me"}</span>
           <FaArrowRight className="text-xs transition-transform duration-200 group-hover:translate-x-1" />
         </Link>
       </div>
@@ -191,14 +246,13 @@ export default function ShopPage() {
       <div className="pt-6 pb-8">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
-            <span className="text-xs uppercase tracking-wider text-accent mb-2 inline-block">Coming Soon</span>
             <h1 className="text-4xl md:text-5xl heading-primary mb-4">
               Website Templates
             </h1>
             <p className="text-lg text-secondary leading-relaxed">
               Affordable, professionally designed website templates built for
-              Ghanaian businesses. Express interest now and be the first to know
-              when your preferred template launches.
+              Ghanaian businesses. Buy a ready-made template and get your
+              business online fast.
             </p>
           </div>
         </div>
@@ -227,18 +281,18 @@ export default function ShopPage() {
                 <div className="w-10 h-10 rounded-full border-2 border-accent flex items-center justify-center mx-auto mb-4">
                   <span className="text-sm font-medium text-primary">1</span>
                 </div>
-                <h3 className="font-medium text-primary mb-2">Express Interest</h3>
+                <h3 className="font-medium text-primary mb-2">Choose</h3>
                 <p className="text-sm text-secondary">
-                  Click &quot;Notify Me&quot; on templates you&apos;re interested in
+                  Pick a template that fits your business
                 </p>
               </div>
               <div className="text-center">
                 <div className="w-10 h-10 rounded-full border-2 border-accent flex items-center justify-center mx-auto mb-4">
                   <span className="text-sm font-medium text-primary">2</span>
                 </div>
-                <h3 className="font-medium text-primary mb-2">Get Notified</h3>
+                <h3 className="font-medium text-primary mb-2">Customize</h3>
                 <p className="text-sm text-secondary">
-                  Be the first to know when your template is ready
+                  I&apos;ll add your content, branding, and details
                 </p>
               </div>
               <div className="text-center">
@@ -247,7 +301,7 @@ export default function ShopPage() {
                 </div>
                 <h3 className="font-medium text-primary mb-2">Launch</h3>
                 <p className="text-sm text-secondary">
-                  Get your customized website up and running
+                  Go live with your professional website
                 </p>
               </div>
             </div>

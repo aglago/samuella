@@ -52,6 +52,12 @@ const Header = () => {
 
         <div className="flex items-center gap-4 sm:gap-6">
           <Link
+            href="/shop"
+            className="text-secondary hover:text-primary transition-colors text-sm"
+          >
+            Buy
+          </Link>
+          <Link
             href="/blog"
             className="text-secondary hover:text-primary transition-colors text-sm"
           >
