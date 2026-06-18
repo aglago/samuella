@@ -1,9 +1,7 @@
 "use client";
 
 import Hero from "@/components/Hero";
-import Promo from "@/components/Promo";
 import Services from "@/components/SimpleServices";
-import Pricing from "@/components/Pricing";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Testimonials from "@/components/Testimonials";
@@ -12,7 +10,6 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export default function Home() {
   const servicesAnimation = useScrollAnimation();
-  const pricingAnimation = useScrollAnimation();
   const experienceAnimation = useScrollAnimation();
   const projectsAnimation = useScrollAnimation();
   const testimonialsAnimation = useScrollAnimation();
@@ -24,7 +21,7 @@ export default function Home() {
       <Hero />
 
       {/* Promo Section */}
-      <Promo />
+      {/* <Promo /> */}
 
       {/* Projects Section */}
       <section
@@ -35,7 +32,7 @@ export default function Home() {
             : "opacity-0 transform translate-y-8"
         }`}
       >
-        <Projects limit={3} />
+        <Projects />
       </section>
       
 
@@ -53,7 +50,7 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section
+      {/* <section
         ref={pricingAnimation.ref}
         className={`transition-all duration-700 ${
           pricingAnimation.isVisible
@@ -62,7 +59,7 @@ export default function Home() {
         }`}
       >
         <Pricing />
-      </section>
+      </section> */}
 
       {/* Experience Section */}
       <section

@@ -100,6 +100,14 @@ export const CURRENT_PROJECT = {
 
 export const FEATURED_PROJECTS = [
   {
+    title: "WayIn - Tech Career Compass",
+    description:
+      "Find your place in tech with a free, interactive career compass. Explore nine career branches, take a fit quiz, and get a personalised roadmap with curated resources, mentor guidance, and community recommendations.",
+    technologies: ["Next.js", "TypeScript", "React", "Interactive Quiz", "Career Mapping"],
+    imageUrl: "/images/wayin.png",
+    projectUrl: "https://wayintech.vercel.app",
+  },
+  {
     title: "AgooSMS - Bulk SMS Platform & API",
     description:
       "Send bulk SMS to your customers at GH₵0.05 per message. Developers get API access at GH₵0.03 per SMS. Voice-to-text in Twi, mobile money payments, and instant delivery across all networks in Ghana.",
@@ -159,7 +167,7 @@ export const FEATURED_PROJECTS = [
 
 export const EXPERIENCE = [
   {
-    role: "Software Engineer I",
+    role: "Software Engineer",
     company: "turntabl",
     period: "Dec 2025 - Present",
     description: "Focusing on frontend and user experience engineering, contributing to several projects. Building intuitive interfaces and driving UX improvements across client-facing applications."
@@ -213,7 +221,7 @@ export const CONTACT_INFO = {
   email: "mailto:samuellamanyeaglago@gmail.com",
   phone: "tel:+233509581027",
   whatsapp:"https://wa.me/233509581027",
-  location: "Tarkwa Nsuaem, Ghana",
+  location: "Kwabenya - Accra, Ghana",
   social: {
     github: "https://github.com/aglago",
     linkedin: "https://linkedin.com/in/aglago",
