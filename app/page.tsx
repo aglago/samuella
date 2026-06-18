@@ -32,7 +32,7 @@ export default function Home() {
             : "opacity-0 transform translate-y-8"
         }`}
       >
-        <Projects />
+        <Projects limit={3} />
       </section>
       
 
